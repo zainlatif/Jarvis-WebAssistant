@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto Mono", monospace;
+}
+
+body {
+    background: red;
+    color: #aed0d0;
+    overflow: hidden;
+}
+
+.main {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+h1 {
+    color: white;
+    font-size: 40px;
+}
+
+p {
+    color: grey;
+    margin-bottom: 40px;
+}
+
+.input {
+    display: flex;
+    align-items: center;
+    width: 40vw;
+    height: 50px;
+    border-radius: 20px;
+}
+
+.talk {
+    position: relative; /* For positioning the pseudo-element */
+    background: transparent;
+    border: none;
+    width: 50px; /* Adjusted for better button size */
+    height: 50px; /* Make height equal for circular shape */
+    cursor: pointer;
+    display: flex; /* Center icon within the button */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+}
+
+.talk::before {
+    content: ''; /* Pseudo-element for background circle */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%; /* Make it circular */
+    background: rgba(255, 255, 255, 0.2); /* Light white background */
+    z-index: -1; /* Place it behind the icon */
+}
+
+.talk i {
+    font-size: 20px;
+    color: white; /* Change icon color to white */
+}
+
+.content {
+    font-size: 15px;
+    margin-left: 20px; /* Changed to margin-left for consistency */
+}
